@@ -10,7 +10,7 @@ require('header.php');
 
 <!--se eu não especificar nada nem o action quanto o method, por padrão o method será GET(irá aparecer os dados na querySTRING)-->
 
-
+<a href="delete.php">Deletar Cookie</a>
 
 <form method="POST" action="validate_info.php">
   <label>
