@@ -1,5 +1,7 @@
 <?php
+session_start();
 require('header.php');
+
 ?>
 
 <!--action é para onde os dados serão enviados-->
@@ -35,5 +37,16 @@ require('header.php');
   </br>
   </br>
 
+  <?php
+  if ($_SESSION) {
+    echo $_SESSION['aviso'];
+    $_SESSION['aviso'] = '';
+  }
+  ?>
+  </br>
+  </br>
+
   <input type="submit" value="Enviar">
+
+
 </form>
