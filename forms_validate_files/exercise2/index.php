@@ -1,9 +1,17 @@
 1° Você irá criar uma lista de nomes em um arquivo .txt
+</br>
 2° No index, você irá ler essa lista do arquivo .txt e exibir essa lista.
+</br>
 3° Criar um formulário com um input e um botao de envio
+</br>
 4° O usuario irá digitar um nome na caixa de input e enviar
+</br>
 5° Ao clicar em enviar, o nome digitado deve ir para essa lista .txt
+</br>
 6° Exiba uma mensagem de erro se o usuario tentar enviar um nome vazio.
+</br>
+</br>
+</br>
 
 
 <?php
