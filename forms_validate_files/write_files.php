@@ -17,6 +17,6 @@ echo '</br>';
 
 $texto3 = file_get_contents('text_text.txt');
 $texto3 .= "\nBrunao";
-file_put_contents('text_text.txt', $texto3);
+// file_put_contents('text_text.txt', $texto3);
 $result = file_get_contents('text_text.txt');
 echo $result;
