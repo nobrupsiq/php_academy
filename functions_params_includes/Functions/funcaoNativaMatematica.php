@@ -5,7 +5,7 @@ echo abs($numero); // Número absoluto
 echo "<br/>";
 echo pi(); // Numero PI
 echo "<br/>";
-echo ceil($numero); // Arredonda para cime
+echo ceil($numero); // Arredonda para cima
 echo "<br/>";
 echo floor($numero); // Arredonda para baixo
 echo "<br/>";

@@ -2,17 +2,19 @@
 session_start();
 require('header.php');
 
+if($_SESSION['aviso']) {
+  echo $_SESSION['aviso'];
+  $_SESSION['aviso'] = '';
+  }
+
 ?>
 
 <!--action é para onde os dados serão enviados-->
-
 <!--se não existir o atributo action os dados serão enviados para o index-->
-
 <!--se eu não especificar nada nem o action quanto o method, por padrão o method será GET(irá aparecer os dados na querySTRING)-->
 
-<a href="delete.php">Deletar Cookie</a>
-
-<form method="POST" action="validate_info.php">
+<a href="apagar.php">Apagar Cookie</a>
+<form method="POST" action='recebedor.php'>
   <label>
     Nome:
     </br>
@@ -29,24 +31,16 @@ require('header.php');
   <br />
   <br />
 
-  <label for="">
+  <label>
     Idade:
     </br>
     <input type="text" name="idade">
   </label>
   </br>
   </br>
-
-  <?php
-  if ($_SESSION) {
-    echo $_SESSION['aviso'];
-    $_SESSION['aviso'] = '';
-  }
-  ?>
-  </br>
-  </br>
-
+  
   <input type="submit" value="Enviar">
 
 
 </form>
+

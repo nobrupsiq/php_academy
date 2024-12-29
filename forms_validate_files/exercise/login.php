@@ -1,26 +1,26 @@
 <?php
-session_start();
+  session_start();
 ?>
 
+
 <html>
+  <header>
+    <title>Login</title>
+  </header>
+  <body>
+    <h1>Digite seu nome</h1>
 
-<head>
-  <title>Formulário de Login</title>
-</head>
+    <?php
+      if(!empty($_SESSION['erro'])) {
+        echo $_SESSION['erro'];
 
-<body>
-  <h1>Qual seu nome?</h1>
-  <?php
-  if (!empty($_SESSION['erro'])) {
-    echo $_SESSION['erro'];
-    unset($_SESSION['erro']);
-  }
-  ?>
+        unset($_SESSION['erro']);
+      }
+    ?>
 
-  <form method="POST" action="receive_files.php">
-    <input type="text" name="nome"> </br>
-    <input type="submit" value="salvar">
-  </form>
-</body>
-
+    <form action="processador_formulario.php" method="POST">
+      <input type="text" name="nome" > </br>
+      <input type="submit" value="Salvar">
+    </form>
+  </body>
 </html>

@@ -45,6 +45,7 @@ $nomes = explode(' ', $firstLetter); // o primeiro parametro é onde você quer 
 echo '<br/>';
 print_r($nomes);
 echo '<br/>';
+
 $numerox = 12913.12;
 
 echo 'R$ '.number_format($numerox, 2, ',', '.'); // 1 parametro é o proprio numero, segundo é a quantidade de decimais, terceiro simbolo correspondente aos decimais padrao brasileiro é virgula, quarto simbolo para milhares EX: o ponto '.';
