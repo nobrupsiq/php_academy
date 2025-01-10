@@ -10,7 +10,7 @@
 // Os namespaces e classes DEVEM seguir um PSR de "carregamento automático": [PSR-0, PSR-4].
 
 // Os nomes de classe DEVEM ser declarados em StudlyCaps.
-class MatematicaBasica {}
+// class MatematicaBasica {}
 // As constantes de classe DEVEM ser declaradas em letras maiúsculas com separadores de sublinhado.
 const VERSION = '1.0';
 // Os nomes de método DEVEM ser declarados em camelCase.
