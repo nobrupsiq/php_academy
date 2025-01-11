@@ -4,3 +4,11 @@
 
 // Com PHP nós trabalhamos com banco de dados Relacional
 // MySQL / MariaDB
+
+// INSERIR
+// ALTERAR
+// REMOVER
+// CONSULTAR
+
+// Regras básicas
+
