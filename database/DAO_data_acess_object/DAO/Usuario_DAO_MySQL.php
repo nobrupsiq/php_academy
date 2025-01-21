@@ -10,7 +10,13 @@ class Usuario_DAO_MySQL implements Usuario_DAO {
     }
     
     public function add(Usuario $usuario) {
+        $sql = $this -> pdo -> prepare('INSERT INTO usuarios (nome, email) VALUES (:nome, :email)');
+        $sql -> bindValue(':nome', $usuario -> get_nome());
+        $sql -> bindValue(':email', $usuario -> get_email());
+        $sql -> execute();
 
+        $usuario -> set_id($this -> pdo -> lastInsertId());
+        return $usuario;
     }
 
     public function find_all() {
@@ -37,7 +43,7 @@ class Usuario_DAO_MySQL implements Usuario_DAO {
     }
 
     public function find_by_email($email) {
-        $sql = $this -> pdo -> prepare("SELECT * FROM usuario WHERE email = :email");
+        $sql = $this -> pdo -> prepare("SELECT * FROM usuarios WHERE email = :email");
         $sql -> bindValue(':email', $email);
         $sql -> execute();
 

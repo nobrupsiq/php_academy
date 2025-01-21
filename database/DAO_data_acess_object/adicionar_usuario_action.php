@@ -7,7 +7,7 @@ $usuario_DAO = new Usuario_DAO_MySQL($pdo);
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_SPECIAL_CHARS);
 $email = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
 
-if($nome && $email) {
+if($name && $email) {
 
     if($usuario_DAO -> find_by_email($email) === false) {
         $novo_usuario = new Usuario();
