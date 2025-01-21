@@ -23,7 +23,7 @@ class Usuario {
     public function set_email($email) {
         $this -> email = strtolower(trim($email));
     }
-}
+};
 
 interface Usuario_DAO {
     public function add(Usuario $usuario);
