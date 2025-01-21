@@ -1,0 +1,33 @@
+DAO(data acess object) Veio para melhorar o PDO
+
+CLASSE USUARIO
+    - id
+    - nome
+    - email
+
+    -getID
+    -setId
+
+    -getNome
+    -setNome
+
+    -getEmail
+    -setEmail
+
+CLASSE USUARIODAO // Classe responsavel por fazer manipulação no banco de dados
+    - add(Usuario)
+
+PASSO 1 PARA ADD USUARIO NOVO:
+    -Criar a classe do novo usuario.
+
+    $usuario = new Usuario();
+    $usuario -> setNome('bruno')
+    $usuario -> setEmail('bruno@siqpires.com')
+
+$usuarioDAO -> add($usuario);
+
+Quero criar um usuario, o que eu faço?
+    1° Crio o objeto do usuario a ser adicionado
+    2° Mando o objeto para o intermediario
+    3° O intermediário faz a comunicação com o banco de dados
+
