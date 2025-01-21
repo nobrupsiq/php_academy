@@ -29,6 +29,7 @@ interface Usuario_DAO {
     public function add(Usuario $usuario);
     public function find_all();
     public function find_by_id($id);
+    public function find_by_email($email);
     public function update(Usuario $usuario);
     public function delete($id);
 }

@@ -35,6 +35,26 @@ class Usuario_DAO_MySQL implements Usuario_DAO {
     public function find_by_id($id) {
 
     }
+
+    public function find_by_email($email) {
+        $sql = $this -> pdo -> prepare("SELECT * FROM usuario WHERE email = :email");
+        $sql -> bindValue(':email', $email);
+        $sql -> execute();
+
+        if($sql -> rowCount() > 0) {
+            $data = $sql -> fetch();
+
+            $usuario = new Usuario();
+            $usuario -> set_id($data['id']);
+            $usuario -> set_nome($data['nome']);
+            $usuario -> set_email($data['email']);
+
+            return $usuario;
+        } else {
+            return false;
+        }
+    }
+
     public function update(Usuario $usuario) {
 
     }
