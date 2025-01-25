@@ -8,7 +8,7 @@
     <label>
         Preco
         </br>
-        <input type="text" placeholder="R$00.00" name='preco'>
+        <input type="text" placeholder="00.00" name='preco'>
     </label>
     </br></br>
     <input type="submit" value="Adicionar" >
