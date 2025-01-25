@@ -39,7 +39,22 @@ class Usuario_DAO_MySQL implements Usuario_DAO {
         return $array;
     }
     public function find_by_id($id) {
+        $sql = $this -> pdo -> prepare("SELECT * FROM usuarios WHERE id = :id");
+        $sql -> bindValue(':id', $id);
+        $sql -> execute();
 
+        if($sql -> rowCount() > 0) {
+            $data = $sql -> fetch();
+
+            $usuario = new Usuario();
+            $usuario -> set_id($data['id']);
+            $usuario -> set_nome($data['nome']);
+            $usuario -> set_email($data['email']);
+
+            return $usuario;
+        } else {
+            return false;
+        }
     }
 
     public function find_by_email($email) {
@@ -62,7 +77,13 @@ class Usuario_DAO_MySQL implements Usuario_DAO {
     }
 
     public function update(Usuario $usuario) {
+        $sql = $this -> pdo -> prepare("UPDATE usuarios SET nome = :nome, email = :email WHERE id = :id");
+        $sql -> bindValue(':nome', $usuario -> get_nome());
+        $sql -> bindValue(':email', $usuario -> get_email());
+        $sql -> bindValue(':id', $usuario -> get_id());
+        $sql -> execute();
 
+        return true;
     }
     public function delete($id) {
 

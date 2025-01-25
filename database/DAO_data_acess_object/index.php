@@ -1,5 +1,5 @@
 <?php
-require 'config.php';
+require 'config.php'; // PDO vem daqui
 require 'DAO/Usuario_DAO_MySQL.php';
 
 $usuario_DAO = new Usuario_DAO_MySQL($pdo);
