@@ -17,7 +17,7 @@ class Usuario_DAO_MySQL implements Usuario_DAO {
 
         $usuario -> set_id($this -> pdo -> lastInsertId());
         return $usuario;
-    }
+    }   
 
     public function find_all() {
         $array = [];
