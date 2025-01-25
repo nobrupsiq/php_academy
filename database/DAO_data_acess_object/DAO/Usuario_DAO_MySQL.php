@@ -86,6 +86,8 @@ class Usuario_DAO_MySQL implements Usuario_DAO {
         return true;
     }
     public function delete($id) {
-
+        $sql = $this -> pdo -> prepare("DELETE FROM usuarios WHERE id = :id");
+        $sql -> bindValue(':id', $id);
+        $sql -> execute();
     }
 }
