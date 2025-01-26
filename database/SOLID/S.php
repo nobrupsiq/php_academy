@@ -3,13 +3,14 @@
 // Principio da responsabilidade unica
 // Toda classe deve ter um e somente um motivo para mudar. A classe precisa ter apenas uma responsabilidade
 
-class Usuario {
-    public function set_nome(){}
-    public function get_nome() {}
-    
-    public function add() {}
-    public function update() {}
-    public function delete() {}
 
+class User {
+    public function set_name() {}
+    public function get_name() {}
 }
 
+class User_DB {
+    public function add_user(User $user) {}
+    public function update_user(User $user) {}
+    public function delete_user(User $id) {}
+}
