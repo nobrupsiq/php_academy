@@ -1,0 +1,21 @@
+M -> MODEL
+V -> VIEW
+C -> CONTROLLER (É a partir do controller que surge tudo)
+
+- o usuário requisita a url site.com.br/sobre
+- o mvc vai verificar se esta ROTA está estabelecida
+- o mvc vai mandar a requisição para o CONTROLLER da rota
+    - CARREGAR UM VIEW
+    - CHAMAR UM MODEL (Usuario)
+
+O processo é o seguinte
+CONTROLLER
+- MODEL
+- VIEW
+
+
+if($rota == 'home') {
+    // vai em direção ao carregamento da HOME
+} elif($rota == 'sobre') {
+    // vai em direção ao carregamento da SOBRE
+}
